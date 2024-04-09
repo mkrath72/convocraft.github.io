@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvoCraft</title>
+    <style type="text/css"> 
+    html {
+    color-scheme: light dark;
+  }
+  
+  body {
+    margin: 1rem;
+    font-size: 1rem;
+    font-family: system-ui;
+  }
+  
+  .quick-example {
+    position: relative;
+    margin: 0rem;
+    margin-top: -1.2rem;
+    padding: 1rem;
+    background: hsl(200 50% 50% / 0.4);
+    border-radius: 0.5rem;
+  
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+  }
+  
+  .quick-example > div {
+    overflow: hidden;
+  }
+  
+  .quick-example:hover {
+    grid-template-rows: 1fr;
+  }
+
+  .chat-section {
+    background-color: #2cd2f8;
+    /*padding: 1px;*/
+    flex-grow: 1;
+    overflow: hidden; /* Hide overflow of the container, letting the iframe handle its own scrolling */
+    width: 100%; /* Adjust based on your layout */
+    height: 300%;
+
+}
+
+.framei{
+    width: 100%;
+    height: 500px; /* Ensure iframe takes up all available space in its container */
+    border: none;
+    position: relative;
+    bottom: -35px
+}
+
+.hover-text {
+    position: absolute;
+    width: 100%;
+    bottom: 0; /* Adjust based on where you want the text to appear */
+    left: 0;
+    padding: -1rem;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    text-align: center;
+    visibility: hidden; /* Hide by default */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.quick-example:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}
+.faq-header {
+    padding: -1rem; /* Adjust padding as needed */
+    background: hsl(210, 50%, 60%); /* Lighter shade for contrast */
+    border-radius: 0.5rem 0.5rem 0 0; /* Rounded corners at the top */
+    color: white; /* White text color */
+}
+
+    </style>
+</head>
+<body> 
+    <div class="faq-header">
+        <h3>FAQs and Search</h3>
+    </div>
+    <div class="quick-example">
+
+        <div>
+            <iframe src="https://app.vectorshift.ai/search/deployed/660eb8901e775e3e39f095c3" frameborder="0" style=width:100%; height:100%;></iframe>
+            <h3>Questionnaire</h3>
+            <ol type="1">
+                <li>Please provide a summary of the conversation.</li>
+                <li>How would you describe BSW to an ex-colleague or friend you haven’t seen in years?</li>
+                <li>How do you think Brandscapes could become more innovative?</li>
+                <li>What’s the most important part of your relationship with Brandscapes?</li>
+                <li>Can you share an experience where Brandscapes truly delivered value to a client?</li>
+                <li>What technology does the company use to extract relevant information for business questions from reports in PDF, PowerPoint, or Excel?</li>
+                <li>Is there a DIY tool mentioned for asking questions and how does it work?</li>
+                <li>How does the AI discussed in the meeting learn and become personalized for the company?</li>
+                <li>What innovative approach did the company take with Coke that was mentioned in the meeting?</li>
+                <li>Are there mentioned ways to improve research using mobile technology?</li>
+                <li>What gaps in the current offerings were discussed in the meeting?</li>
+                <li>How does the company plan to differentiate or add to their offerings compared to competitors?</li>
+                
+                <li>Can you describe the diverse upbringing and career journey of Sarath Nair as discussed in the document summary?</li>
+              </ol> 
+        </div>
+        
+      </div>
+      
+      <div class="chat-section">
+          <iframe src="https://app.vectorshift.ai/chatbots/deployed/660f9e621e775e3e39f0b68f" class="framei"></iframe>
+
+        </div>
+    
+</body>
+</html>
